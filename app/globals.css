@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 241, 245, 249;
+  --background-start-rgb: 7, 11, 19;
+  --background-end-rgb: 11, 15, 25;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: #070b13;
+  min-height: 100vh;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar for dark & techy aesthetic */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070b13;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 238, 255, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00eeff;
+}
+
+/* ================= SHATTER / CRACK ANIMATIONS ================= */
+@keyframes crackShake {
+  0% { transform: translate(0, 0) scale(1); filter: brightness(1); }
+  15% { transform: translate(-4px, 3px) scale(0.97); filter: brightness(1.8); }
+  35% { transform: translate(4px, -3px) scale(0.96); filter: brightness(2); }
+  55% { transform: translate(-3px, -2px) scale(0.96); filter: brightness(1.6); }
+  75% { transform: translate(3px, 2px) scale(0.98); filter: brightness(1.3); }
+  100% { transform: translate(0, 0) scale(1); filter: brightness(1); }
+}
+
+@keyframes shardBurst1 {
+  0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 1; }
+  100% { transform: translate(-45px, -40px) rotate(-70deg) scale(0); opacity: 0; }
+}
+
+@keyframes shardBurst2 {
+  0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 1; }
+  100% { transform: translate(45px, -45px) rotate(70deg) scale(0); opacity: 0; }
+}
+
+@keyframes shardBurst3 {
+  0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 1; }
+  100% { transform: translate(-50px, 35px) rotate(-90deg) scale(0); opacity: 0; }
+}
+
+@keyframes shardBurst4 {
+  0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 1; }
+  100% { transform: translate(50px, 40px) rotate(90deg) scale(0); opacity: 0; }
+}
+
+@keyframes shardBurst5 {
+  0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 1; }
+  100% { transform: translate(0px, -55px) rotate(30deg) scale(0); opacity: 0; }
+}
+
+@keyframes shardBurst6 {
+  0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 1; }
+  100% { transform: translate(0px, 55px) rotate(-30deg) scale(0); opacity: 0; }
+}
+
+.animate-crack-shake {
+  animation: crackShake 0.35s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.animate-shard-1 {
+  animation: shardBurst1 0.45s ease-out forwards;
+}
+.animate-shard-2 {
+  animation: shardBurst2 0.45s ease-out forwards;
+}
+.animate-shard-3 {
+  animation: shardBurst3 0.45s ease-out forwards;
+}
+.animate-shard-4 {
+  animation: shardBurst4 0.45s ease-out forwards;
+}
+.animate-shard-5 {
+  animation: shardBurst5 0.45s ease-out forwards;
+}
+.animate-shard-6 {
+  animation: shardBurst6 0.45s ease-out forwards;
+}
